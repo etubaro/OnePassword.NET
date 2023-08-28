@@ -259,6 +259,13 @@ public interface IOnePasswordManager
     public void DeleteItem(IItem item, IVault vault);
 
     /// <summary>
+    /// Get a value by secret reference URI.
+    /// </summary>
+    /// <param name="uri">The secret reference URI</param>
+    /// <exception cref="ArgumentException">Thrown when there is an invalid argument.</exception>
+    public string Read(string uri);
+
+    /// <summary>
     /// Gets the templates.
     /// </summary>
     /// <returns>The list of templates.</returns>
