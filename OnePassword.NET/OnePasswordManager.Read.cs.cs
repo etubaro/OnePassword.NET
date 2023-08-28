@@ -12,7 +12,7 @@ public sealed partial class OnePasswordManager
         var trimmedName = uri.Trim();
         if (trimmedName.Length == 0)
             throw new ArgumentException($"{nameof(uri)} cannot be empty.", nameof(uri));
-        var command = $"read {uri}";
+        var command = $"read \"{uri}\"";
         return Op<string>(command);
     }
 }
